@@ -1,8 +1,14 @@
-var ArrayFunctions = function (){}
+/*jshint esversion:6 */
+let ArrayFunctions = function (){
+for ( let i=0; i<= ArrayFunctions.length; i++){
+  console.log(`${ArrayFunctions [i]} + ---`);
+}
+};
 
-// 1) Define a function that takes an array with numbers and prints all the elements of the array, separated by " --- "
-// ArrayFunctions.printSpecial([12, 33, 144, 122])
-// 12 -- 33 -- 144 -- 122
+ //
+ // 1) Define a function that takes an array with numbers and prints all the elements of the array, separated by " --- "
+ // ArrayFunctions.printSpecial([12, 33, 144, 122])
+ // 12 -- 33 -- 144 -- 122
 
 ArrayFunctions.prototype.printSpecial = function (array) {
   return array.join(" --- ");
@@ -28,6 +34,6 @@ ArrayFunctions.prototype.superPower = function(array){
   return array.reduce(function(sum, number, index){
     return sum + (number * (Math.pow(10, index)));
   });
-}
+};
 
 module.exports = ArrayFunctions;
